@@ -1,0 +1,6 @@
+#auctions {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  max-width: 40%;
+}
