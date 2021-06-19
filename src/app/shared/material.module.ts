@@ -10,6 +10,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import {MatChipsModule} from "@angular/material/chips";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatInputModule,
     MatSidenavModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule
   ],
   exports: [
     MatButtonModule,
@@ -37,7 +39,8 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatInputModule,
     MatSidenavModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule {}
