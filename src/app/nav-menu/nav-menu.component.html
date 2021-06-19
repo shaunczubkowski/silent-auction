@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/auction/list']">
+    <mat-icon>storefront</mat-icon>
+    <span>Auction List</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/auction/add']">
+    <mat-icon>post_add</mat-icon>
+    <span>Add New Auction</span>
+  </button>
+</mat-menu>
