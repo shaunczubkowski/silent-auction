@@ -7,11 +7,11 @@ import {Auction} from '../shared/auction';
   styleUrls: ['./auction-card.component.css'],
 })
 export class AuctionCardComponent implements OnInit {
-  @Input() auction: Auction | undefined;
+  @Input() auction!: Auction;
 
-  constructor() {
-    this.auction = undefined;
-  }
+  defaultImage = 'https://via.placeholder.com/150';
+
+  constructor() { }
 
   ngOnInit(): void {}
 

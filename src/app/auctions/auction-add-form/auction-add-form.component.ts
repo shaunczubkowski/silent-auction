@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {Auction} from "../shared/auction";
+import {AuctionService} from "../shared/services/auction.service";
 
 @Component({
   selector: 'app-auction-add-form',
@@ -10,7 +11,7 @@ import {Auction} from "../shared/auction";
 export class AuctionAddFormComponent implements OnInit {
   @Input() auctionData: Auction | undefined;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private auctionService: AuctionService) {
     this.auctionData = undefined;
   }
 
@@ -29,7 +30,7 @@ export class AuctionAddFormComponent implements OnInit {
   });
 
   saveForm() {
-    console.log(this.auctionForm.value);
+    this.auctionService.addAuction(this.auctionForm.value);
   }
 
   loadData(auctionData: Auction) {
