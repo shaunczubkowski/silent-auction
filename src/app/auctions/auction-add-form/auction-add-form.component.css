@@ -1,0 +1,19 @@
+.auction-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auction-field-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.auction-field {
+  margin: 15px;
+}
+
+#auction-image {
+  margin: 10px;
+}

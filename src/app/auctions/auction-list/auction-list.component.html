@@ -1,5 +1,7 @@
-<div class="auction-list-wrapper">
-  <div *ngFor="let auction of auctionList">
-    <app-auction-card [auction]="auction"></app-auction-card>
+<mat-card id="auctions-list">
+  <div class="auction-list-wrapper">
+    <div *ngFor="let auction of auctions$ | async">
+      <app-auction-card [auction]="auction"></app-auction-card>
+    </div>
   </div>
-</div>
+</mat-card>

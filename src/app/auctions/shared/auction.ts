@@ -1,5 +1,5 @@
 export interface Auction {
-  id: number;
+  id?: number;
   title: string;
   creator: string;
   startDate: Date;

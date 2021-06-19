@@ -7,10 +7,14 @@ import { AuctionsComponent } from './auctions.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared/shared.module';
+import {MaterialModule} from "../shared/material.module";
+import { AuctionAddFormComponent } from './auction-add-form/auction-add-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {AuctionRoutingModule} from "./auction-routing.module";
 
 @NgModule({
-  declarations: [AuctionsComponent, AuctionListComponent, AuctionCardComponent],
-  imports: [CommonModule, MatCardModule, MatButtonModule, SharedModule],
+  declarations: [AuctionsComponent, AuctionListComponent, AuctionCardComponent, AuctionAddFormComponent],
+  imports: [CommonModule, MatCardModule, MatButtonModule, SharedModule, MaterialModule, ReactiveFormsModule, AuctionRoutingModule],
   exports: [AuctionsComponent],
 })
 export class AuctionsModule {}

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Auction } from '../shared/auction';
+import {Component, Input, OnInit} from '@angular/core';
+import {Auction} from '../shared/auction';
 
 @Component({
   selector: 'app-auction-card',
@@ -9,7 +9,12 @@ import { Auction } from '../shared/auction';
 export class AuctionCardComponent implements OnInit {
   @Input() auction: Auction | undefined;
 
-  constructor() {}
+  constructor() {
+    this.auction = undefined;
+  }
 
   ngOnInit(): void {}
+
+  editAuction(auction: Auction | undefined): void {
+  }
 }

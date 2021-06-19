@@ -1,14 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Auction } from '../shared/auction';
+import {AuctionService} from "../shared/services/auction.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-auction-list',
   templateUrl: './auction-list.component.html',
   styleUrls: ['./auction-list.component.css'],
 })
-export class AuctionListComponent implements OnInit {
-  @Input() auctionList: Auction[] | undefined;
-  constructor() {}
+export class AuctionListComponent {
+  auctions$: Observable<Auction[]>;
 
-  ngOnInit(): void {}
+  constructor(private auctionService: AuctionService) {
+    this.auctions$ = this.auctionService.getAuctions();
+  }
 }

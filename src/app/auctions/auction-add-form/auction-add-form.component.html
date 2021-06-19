@@ -1,0 +1,34 @@
+<mat-card>
+  <h2>Create an Auction</h2>
+  <p>Fill in the form below and click Save.</p>
+  <form class="auction-form" [formGroup]="auctionForm" (ngSubmit)="saveForm()">
+    <mat-form-field appearance="fill" class="auction-field">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="auction-field">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder="Ex. This auction includes..."></textarea>
+    </mat-form-field>
+    <div class="auction-field-group">
+      <mat-form-field appearance="fill" class="auction-field">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate formControlName="startDate" placeholder="Start date">
+          <input matEndDate formControlName="endDate" placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+      <div class="auction-field">
+        <mat-label>Upload a picture:</mat-label>
+        <br>
+        <input type="file"
+               id="auction-image" name="auction-image"
+               accept="image/png, image/jpeg" formControlName="image">
+      </div>
+    </div>
+
+    <button mat-stroked-button color="primary" type="submit" [disabled]="!auctionForm.valid">Save</button>
+  </form>
+</mat-card>
