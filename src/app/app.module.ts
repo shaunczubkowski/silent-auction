@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { AuctionsModule } from './auctions/auctions.module';
+import {MaterialModule} from "./shared/material.module";
+import { HeaderComponent } from './header/header.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, NavMenuComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    AuctionsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],
