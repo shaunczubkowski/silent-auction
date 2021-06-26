@@ -2,7 +2,7 @@
   <h2>Auctions</h2>
   <div class="auction-list-wrapper">
       <div *ngFor="let auction of auctions$ | async">
-        <app-auction-card [auction]="auction"></app-auction-card>
+        <app-auction-card [auction]="auction" (deleteEmitter)="deleteAuction(auction.id)"></app-auction-card>
       </div>
   </div>
 </mat-card>

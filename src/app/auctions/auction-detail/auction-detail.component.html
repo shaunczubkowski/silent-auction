@@ -1,0 +1,10 @@
+<ng-container *ngIf="auction$ | async as auction">
+  <div class="container">
+    <app-auction-image></app-auction-image>
+    <h1>{{ auction.title }}</h1>
+    <h4>{{ auction.startDate | date: 'shortDate' }} - {{ auction.endDate | date: 'shortDate' }}</h4>
+    <p>{{ auction.description }}</p>
+  </div>
+</ng-container>
+
+

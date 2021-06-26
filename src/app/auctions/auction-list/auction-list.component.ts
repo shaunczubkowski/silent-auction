@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component } from '@angular/core';
 import { Auction } from '../shared/auction';
 import {AuctionService} from "../shared/services/auction.service";
 import {Observable} from "rxjs";
@@ -13,5 +13,9 @@ export class AuctionListComponent {
 
   constructor(private auctionService: AuctionService) {
     this.auctions$ = this.auctionService.getAuctions();
+  }
+
+  deleteAuction(id: number | undefined): void {
+    this.auctionService.deleteAuctionById(id!);
   }
 }

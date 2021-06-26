@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Auction} from '../shared/auction';
 
 @Component({
@@ -8,13 +8,9 @@ import {Auction} from '../shared/auction';
 })
 export class AuctionCardComponent implements OnInit {
   @Input() auction!: Auction;
-
-  defaultImage = 'https://via.placeholder.com/150';
+  @Output() deleteEmitter = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {}
-
-  editAuction(auction: Auction | undefined): void {
-  }
 }

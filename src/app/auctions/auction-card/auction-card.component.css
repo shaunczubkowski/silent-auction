@@ -9,3 +9,9 @@
   max-width: 200px;
   margin-left: 15px;
 }
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

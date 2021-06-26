@@ -4,6 +4,6 @@ export interface Auction {
   creator: string;
   startDate: Date;
   endDate: Date;
-  image: string;
+  image?: string;
   description: string;
 }
